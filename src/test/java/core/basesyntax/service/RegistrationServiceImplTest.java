@@ -104,7 +104,7 @@ class RegistrationServiceImplTest {
         user1.setPassword("admin");
         assertThrows(InvalidDataException.class,
                 () -> registrationService.register(user1),
-                "User login length " + user1.getPassword().length()
+                "User password length " + user1.getPassword().length()
                         + " but must be at least 6 expected "
                         + InvalidDataException.class.getName());
     }

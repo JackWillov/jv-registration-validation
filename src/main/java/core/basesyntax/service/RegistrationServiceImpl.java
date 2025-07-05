@@ -17,7 +17,7 @@ public class RegistrationServiceImpl implements RegistrationService {
         if (user.getLogin() == null
                 || user.getLogin().length() < ACCEPTED_LOGIN_LENGTH) {
             throw new InvalidDataException("Login can't be null or less than "
-                    + ACCEPTED_PASSWORD_LENGTH + " symbols");
+                    + ACCEPTED_LOGIN_LENGTH + " symbols");
         }
         if (user.getPassword() == null
                 || user.getPassword().length() < ACCEPTED_PASSWORD_LENGTH) {
